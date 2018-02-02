@@ -14,3 +14,5 @@ fetch(request).then(function(response){
     else console.log("Freek");
   });
 });
+
+//Working Just fine
