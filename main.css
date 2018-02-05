@@ -1,0 +1,25 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+.quote {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 100px;
+  border-style: outset;
+}
+
+.author{
+
+  margin-top: 10px;
+  margin-left: 1140px;
+  margin-right: 50px;
+  font-style: italic;
+}
+
+.btn-default{
+  margin-top:5px;
+  margin-left: 20px;
+
+}

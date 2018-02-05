@@ -1,5 +1,4 @@
-// ReactDOM
-const url = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=';
+const url = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat='; 
     const request = new Request(url, {
       headers : new Headers({
       'Content-Type': 'application/x-www-form-urlencoded',
@@ -22,13 +21,19 @@ class Main extends React.Component {
       .then(data => this.setState({ quote: data.quote, author : data.author }));
    }
 
+  handleButtonClick() {
+    this.componentDidMount();
+  }
 
   render() {
     return (
       <div>
-        <h2 className= "">Random Quote Machine</h2>
-        <h1>{this.state.quote}</h1>
-        <h3>"{this.state.author}"</h3>
+        <h2>Random Quote Machine</h2>
+        <h1 className= "quote">{this.state.quote}</h1>
+        <h3 className= "author">"{this.state.author}"</h3>
+        <button className= "btn-default" onClick={this.handleButtonClick.bind(this)}>
+          New Quote
+        </button>
       </div>
     );
 
