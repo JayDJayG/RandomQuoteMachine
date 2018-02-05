@@ -23,3 +23,13 @@ body {
   margin-left: 20px;
 
 }
+
+.twitter-share-button{
+  margin-top:5px;
+  margin-left: 20px;
+
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}

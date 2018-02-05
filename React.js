@@ -16,13 +16,22 @@ class Main extends React.Component {
     };
   }
    componentDidMount() {
-    fetch(request)
+     fetch(request)
       .then(response => response.json())
       .then(data => this.setState({ quote: data.quote, author : data.author }));
+
+
    }
 
   handleButtonClick() {
     this.componentDidMount();
+  }
+
+  tweetButtonClick() {
+  let url = "https://codepen.io/JayDJayG/pen/yvOBWa?editors=0010";
+  let text = `${this.state.quote} by ${this.state.author}`;
+  window.open('http://twitter.com/share?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(text), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+
   }
 
   render() {
@@ -34,6 +43,11 @@ class Main extends React.Component {
         <button className= "btn-default" onClick={this.handleButtonClick.bind(this)}>
           New Quote
         </button>
+        <button className= "btn-default fa fa-twitter" onClick={this.tweetButtonClick.bind(this)}>
+          Tweet
+        </button>
+
+
       </div>
     );
 
